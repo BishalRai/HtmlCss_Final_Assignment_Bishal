@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">
+                <img class="logo" src="images/Logo.png" alt="">
+            </a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="signup.html">SIGN UP</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+            <img class="menu-icon" src="images/list.svg" alt="" onclick="togglemenu()">
+        </div>
+        <div class="important">
+            <p class="heading">Contact Us</p>
+            <div class="address-info">
+
+                <img src="images/location_pin.svg" alt="">
+                <span id="span-address">Itahari - 20, Sunsari, Koshi, Nepal</span><br>
+                <img src="images/mailing address.svg" alt="">
+                <span id="span-email">contact@kirati.com.np</span><br>
+                <img src="images/phone.svg" alt="">
+                <span id="span-phone">+977 025-244668</span>
+            </div>
+            <div class="map-location">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.226684983405!2d87.27449406873954!3d26.66279176146732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c655848e38d%3A0x6061af05c925018b!2sItahari%20Sub-Metropolitan%20City%20Office!5e0!3m2!1sen!2snp!4v1642248353328!5m2!1sen!2snp"
+                    style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="social-link">
+            <img src="images/facebook.svg" alt="">
+            <img src="images/instagram.svg" alt="">
+            <img src="images/twitter.svg" alt="">
+        </div>
+    </div>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "132px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

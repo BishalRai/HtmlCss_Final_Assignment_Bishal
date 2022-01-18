@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    /* padding-left: 8%;
+    padding-right: 8%; */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Menu design start */
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #E5E5E5;
+}
+.logo{
+    width: 115px;
+    height: 30px;
+    cursor: pointer;
+    margin: 29px 0 21px 14px;
+}
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style-type:none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #1B5FA0;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: #DF68AD;
+    font-size: 21px;
+}
+/* Menu design end */
+
+/* main body part */
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+.col-1 h2{
+    font-size: 54px;
+    color: #1B5FA0;
+}
+.col-1 h3{
+    font-size: 30px;
+    color: #002B64;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col-1 p{
+    font-size: 16px;
+    color: #003069;
+    font-weight: 100;
+}
+.col-1 h4{
+    color: #4F63AD;
+    margin: 30px 0;
+    font-size: 28px;
+}
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background:#1B5FA0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+button:hover{
+    width: 160px;
+    
+}
+/* side vertical blue line */
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 65%;
+    background: #1B5FA0;
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+/* end of left main body part*/
+
+
+/* start of right (laptop) main body part*/
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+.col-2 .controller{
+    width: 90%;
+} 
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #1B5FA0;
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(150px);
+} 
+.add-btn img{
+    width: 35px;
+    margin-bottom: 5px;
+}
+.add-btn{  
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+/*end of right (laptop) main body part*/
+
+/* start of bottom social link */
+.social-link img{
+    height: 16px;
+    margin: 20px;
+    cursor: pointer;
+    
+}
+.social-link{
+    text-align: center;
+    background-color: #E5E5E5;
+}
+/* end of bottom social link */
+
+
+@media screen and (max-width:700px) {
+    nav ul{
+        width: 100%;
+        background: #1B5FA0;
+        position: absolute;
+        top:75px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+        font-size: 14px;
+    }
+    /* for displaying the toggle menu in small screen */
+    .menu-icon{
+        display: block;
+        margin-right:20px;
+        width: 30px;
+        color: #1B5FA0;
+    }
+
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .col-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .col-2 .controller{
+        width: 77%;
+    }
+    .color-box{
+        transform: translateX(75px);
+    }
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-1 h2{
+        font-size: 35px;
+    }
+    .col-1 h3{
+        font-size: 15px;
+    }
+    .col-1 h4{
+        font-size: 12px;
+    }
+    .col-1 p{
+        font-size: 12px;
+        
+    }
+}
